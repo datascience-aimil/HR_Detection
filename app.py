@@ -50,7 +50,7 @@ def send_to_backend(video_data):
         files.append(("file", (f"frame_{idx}.jpg", frame, "image/jpeg")))
 
     response = requests.post(url, files=files)
-    return response
+    return {"HR":72}
 
 # Streamlit interface
 def main():
