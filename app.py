@@ -9,10 +9,16 @@ def capture_and_send_video():
     video_data = []
     start_time = time.time()
 
+    # Create a unique key counter
+    key_counter = 0
+
     # Streamlit camera input (with a unique key for each instance)
     while time.time() - start_time < 33:  # Record for 33 seconds
+        # Increment the key counter for each new camera input
+        key_counter += 1
+
         # Capture image from camera input with a unique key
-        img = st.camera_input("Take a photo", key=f"camera_{int(time.time() * 1000)}")
+        img = st.camera_input("Take a photo", key=f"camera_{key_counter}")
 
         if img is not None:
             # Display the captured image
