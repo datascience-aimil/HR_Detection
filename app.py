@@ -13,7 +13,7 @@ def capture_and_send_video():
     key_counter = 0
 
     # Streamlit camera input (with a unique key for each instance)
-    while time.time() - start_time < 33:  # Record for 33 seconds
+    while time.time() - start_time < 5:  # Record for 33 seconds
         # Increment the key counter for each new camera input
         key_counter += 1
 
